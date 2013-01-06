@@ -1,0 +1,11 @@
+#drop_target {
+  width: 400px;
+  height: 300px;
+  border: 1px dashed;
+  color: #ddd;
+  font-family: helvetica, arial, san-serif;
+  font-size: 42pt;
+  text-align: center;
+  border-color: #999;
+  cursor: pointer;
+}

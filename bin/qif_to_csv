@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+require_relative '../environment'
+
+files = ARGV
+files.each do |filename|
+  csv_filename = filename.sub(/\.qif\z/,".csv")
+  next if File.exists?(csv_filename)
+  qif = Qif.open(filename)
+  File.open(csv_filename, "w") do |io|
+    io.write qif.to_csv
+  end
+end
